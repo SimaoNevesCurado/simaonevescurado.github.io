@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gira-Discos Personalizável</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- TOP BAR -->
+      <div class="container header-top">
+        <a href="../index.html"> 
+        <img src="../images/logo.png" class="header-logo" />
+
+        </a>
+
+        <nav class="header-nav">
+          <a href="#">CASA</a>
+          <a href="#">MODA</a>
+        </nav>
+
+        <div class="header-search">
+          <input type="text" placeholder="O que procura?" />
+        </div>
+
+        <div class="header-icons">
+          <div class="user-box">
+            <img src="../images/user.svg" />
+            <span>Entrar/Registar</span>
+          </div>
+          <img src="../images/heart.svg" class="icon-small" />
+          <img src="../images/bag.svg" class="icon-small" />
+        </div>
+      </div>
+
+      <!-- BOTTOM BAR (MENU + CATEGORIAS) -->
+      <div class="container header-bottom">
+        <button class="menu-btn">
+          <img src="../images/menu.svg" />
+          <span>MENU</span>
+        </button>
+
+        <nav class="header-categories">
+          <a href="#">Natal</a>
+          <a href="#">Têxtil-lar</a>
+          <a href="#">Top Vendas</a>
+        </nav>
+
+        <a class="pro-link" href="#">Profissionais</a>
+      </div>
+    </header>
+
+    <main class="container pdp-grid">
+      <section class="pdp-gallery">
+        <div class="carousel">
+          <button class="carousel-arrow left">←</button>
+          <button class="carousel-arrow right">→</button>
+
+          <!-- BOTÃO OVERLAY -->
+          <a href="./productView.html" class="carousel-overlay-btn">
+            Ver em detalhe
+          </a>
+
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <canvas id="meuCanvas"></canvas>
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo1.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo2.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo3.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo4.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo5.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo6.png" alt="" />
+            </div>
+            <div class="carousel-slide">
+              <img src="../images/Exemplo7.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnails">
+          <div class="thumb active" data-index="0">
+            <span>3D</span>
+          </div>
+          <div class="thumb" data-index="1">
+            <img src="../images/Exemplo1.png" />
+          </div>
+          <div class="thumb" data-index="2">
+            <img src="../images/Exemplo2.png" />
+          </div>
+          <div class="thumb" data-index="3">
+            <img src="../images/Exemplo3.png" />
+          </div>
+          <div class="thumb" data-index="4">
+            <img src="../images/Exemplo3.png" />
+          </div>
+          <div class="thumb" data-index="5">
+            <img src="../images/Exemplo5.png" />
+          </div>
+          <div class="thumb" data-index="6">
+            <img src="../images/Exemplo6.png" />
+          </div>
+          <div class="thumb" data-index="7">
+            <img src="../images/Exemplo7.png" />
+          </div>
+        </div>
+
+        <div class="bullets">
+          <button class="bullet active" data-index="0"></button>
+          <button class="bullet" data-index="1"></button>
+          <button class="bullet" data-index="2"></button>
+          <button class="bullet" data-index="3"></button>
+          <button class="bullet" data-index="4"></button>
+          <button class="bullet" data-index="5"></button>
+          <button class="bullet" data-index="6"></button>
+          <button class="bullet" data-index="7"></button>
+        </div>
+      </section>
+
+      <section class="pdp-info">
+        <h1 class="product-title">Gira-Discos Personalizável</h1>
+
+        <div class="rating">★ 4.5 (2431 avaliações)</div>
+
+        <div class="configurator">
+          <!-- TAMPA -->
+          <div class="config-item">
+            <button class="config-header">
+              <span>Tampo</span>
+              <span class="meta">2 opções</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="config-content">
+              <button
+                class="material-tile tampo-material-option"
+                value="0"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <p class="base-model-preview"></p>
+                </span>
+                <span class="material-label">Modelo Base</span>
+              </button>
+
+              <button
+                class="material-tile tampo-material-option"
+                value="1"
+                data-texture="Cinza"
+              >
+                <span
+                  class="material-preview"
+                  style="background-color: #e0e0e0"
+                ></span>
+                <span class="material-label">Claro</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- BASE -->
+          <div class="config-item">
+            <button class="config-header">
+              <span>Base </span>
+              <span class="meta">5 opções</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="config-content">
+              <button
+                class="material-tile base-material-option"
+                value="0"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <p class="base-model-preview"></p>
+                </span>
+                <span class="material-label">Modelo Base</span>
+              </button>
+              <button
+                class="material-tile base-material-option"
+                value="1"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/madeira-branca/oldplywood-albedo.png"
+                    alt="Base branca"
+                  />
+                </span>
+                <span class="material-label">Madeira Branca</span>
+              </button>
+
+              <button
+                class="material-tile base-material-option"
+                value="2"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/bamboo/bamboo-wood-semigloss-albedo.png"
+                    alt="Base de Bamboo"
+                  />
+                </span>
+                <span class="material-label">Bamboo</span>
+              </button>
+
+              <button
+                class="material-tile base-material-option"
+                value="3"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/madeira-cherry/cherry-wood-veneer2-albedo.png"
+                    alt="Base madeira-cherry"
+                  />
+                </span>
+                <span class="material-label">Madeira Cherry</span>
+              </button>
+              <button
+                class="material-tile base-material-option"
+                value="4"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/granito/cloudy-veined-quartz-light_albedo.png"
+                    alt="Base granito"
+                  />
+                </span>
+                <span class="material-label">Granito</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Corpo -->
+          <div class="config-item">
+            <button class="config-header">
+              <span>Corpo</span>
+              <span class="meta">6 opções</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="config-content">
+              <button
+                class="material-tile corpo-material-option"
+                value="0"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <p class="base-model-preview"></p>
+                </span>
+                <span class="material-label">Modelo Base</span>
+              </button>
+
+              <button
+                class="material-tile corpo-material-option"
+                value="1"
+                data-texture="branco"
+              >
+                <span
+                  class="material-preview"
+                  style="background-color: beige"
+                ></span>
+                <span class="material-label">Branco</span>
+              </button>
+
+              <button
+                class="material-tile corpo-material-option"
+                value="2"
+                data-texture="Cinza"
+              >
+                <span
+                  class="material-preview"
+                  style="background-color: gray"
+                ></span>
+                <span class="material-label">Cinza</span>
+              </button>
+
+              <button
+                class="material-tile corpo-material-option"
+                value="3"
+                data-texture="madeira_branca"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/madeira-branca/oldplywood-albedo.png"
+                    alt="Madeira branca"
+                  />
+                </span>
+                <span class="material-label">Madeira branca</span>
+              </button>
+              <button
+                class="material-tile corpo-material-option"
+                value="4"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/granito/cloudy-veined-quartz-light_albedo.png"
+                    alt="Base granito"
+                  />
+                </span>
+                <span class="material-label">Granito</span>
+              </button>
+              <button
+                class="material-tile corpo-material-option"
+                value="5"
+                data-texture="base"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/madeira-cherry/cherry-wood-veneer2-albedo.png"
+                    alt="Base granito"
+                  />
+                </span>
+                <span class="material-label">Granito</span>
+              </button>
+            </div>
+          </div>
+          <!-- ARM -->
+          <div class="config-item">
+            <button class="config-header">
+              <span>Acessorios</span>
+              <span class="meta">2 opções</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="config-content">
+              <button class="material-tile arm-material-option" value="0">
+                <span
+                  class="material-preview color-black"
+                  style="background-color: black"
+                ></span>
+                <span class="material-label">Preto</span>
+              </button>
+
+              <button class="material-tile arm-material-option" value="1">
+                <span class="material-preview color-white"></span>
+                <span class="material-label">Branco</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- PÉS -->
+          <div class="config-item">
+            <button class="config-header">
+              <span>Apoios</span>
+              <span class="meta">4 opções</span>
+              <span class="arrow">▶</span>
+            </button>
+
+            <div class="config-content">
+              <button class="material-tile feet-material-option" value="0">
+                <span
+                  class="material-preview color-white"
+                  style="background-color: black"
+                ></span>
+                <span class="material-label">Borracha</span>
+              </button>
+
+              <button
+                class="material-tile feet-material-option"
+                value="1"
+                data-texture="pes"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/plastico/worn-old-plastic_albedo.png"
+                    alt="Base granito"
+                  />
+                </span>
+                <span class="material-label">Plastico</span>
+              </button>
+              <button
+                class="material-tile feet-material-option"
+                value="2"
+                data-texture="pes"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/metal/worn-aluminum_albedo.png"
+                    alt="pes granito"
+                  />
+                </span>
+                <span class="material-label">Metal</span>
+              </button>
+              <button
+                class="material-tile feet-material-option"
+                value="3"
+                data-texture="pes"
+              >
+                <span class="material-preview">
+                  <img
+                    src="../models/textures/cortica/corkboard3b-albedo.png"
+                    alt="Pes cortica"
+                  />
+                </span>
+                <span class="material-label">Cortiça</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions-panel" id="acoes-3d">
+          <h3 class="actions-title">Ações do Gira-Discos</h3>
+
+          <!-- TAMPA -->
+          <div class="action-row">
+            <span class="action-label">Tampa</span>
+            <div class="action-toggle">
+              <button id="btn_abrir_tampa">Fechar</button>
+              <button id="btn_fechar_tampa">Abrir</button>
+            </div>
+          </div>
+
+          <!-- DISCO -->
+          <div class="action-row">
+            <span class="action-label">Disco</span>
+            <div class="action-toggle">
+              <button id="btn_ligar_disco">Ligar</button>
+              <button id="btn_desligar_disco">Desligar</button>
+            </div>
+          </div>
+
+          <!-- OUTROS -->
+          <div class="action-row">
+            <span class="action-label">Outros</span>
+            <div class="action-toggle">
+              <button id="btn_trocar_musica">Trocar música</button>
+              <button id="btn_zoom">Zoom</button>
+              <button id="btn_angulo">Mudar Angulo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="price">
+          <span class="from">A partir de</span>
+          <span class="value">299,00 €</span>
+        </div>
+
+        <button class="add-cart">Juntar ao Carrinho</button>
+      </section>
+    </main>
+    <section class="related-section container">
+      <h2 class="related-title">Outros artigos</h2>
+
+      <div class="related-grid">
+        <!-- CARD 1 -->
+        <div class="related-card">
+          <div class="related-img">
+            <img src="../images/2.jpg" alt="" />
+            <span class="badge">Desconto</span>
+          </div>
+
+          <h3 class="related-brand">TOALHA DE BANHO</h3>
+          <p class="related-name">
+            Toalha de banho em cetim de algodão, Georgio
+          </p>
+
+          <p class="related-price">
+            a partir de <span class="price-strong">24.29 €</span>
+            <span class="price-old">59.99 €</span>
+            <span class="price-discount">-60%</span>
+          </p>
+
+          <div class="related-rating">★ 5</div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="related-card">
+          <div class="related-img">
+            <img src="../images/3.jpg" alt="" />
+            <span class="badge">Desconto</span>
+          </div>
+
+          <h3 class="related-brand">TOALHAS DE PRAIA</h3>
+          <p class="related-name">
+            Toalhas para praia em algodão lavado, Rosarius
+          </p>
+
+          <p class="related-price">
+            a partir de <span class="price-strong">21.37 €</span>
+            <span class="price-old">35.99 €</span>
+            <span class="price-discount">-41%</span>
+          </p>
+
+          <div class="related-rating">★ 4,8</div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="related-card">
+          <div class="related-img">
+            <img src="../images/i1.jpg" alt="" />
+            <span class="badge">Desconto</span>
+          </div>
+
+          <h3 class="related-brand">ARMÁRIO DUPLO</h3>
+          <p class="related-name">Armário em madeira turca, Molina</p>
+
+          <p class="related-price">
+            a partir de <span class="price-strong">170,49 €</span>
+            <span class="price-old">250.99 €</span>
+            <span class="price-discount">-55%</span>
+          </p>
+
+          <div class="related-rating">★ 5</div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="related-card">
+          <div class="related-img">
+            <img src="../images/i2.jpg" alt="" />
+            <span class="badge">Desconto</span>
+          </div>
+
+          <h3 class="related-brand">ARMÁRIO MODERNO</h3>
+          <p class="related-name">Armário para casa de banho, Pinho</p>
+
+          <p class="related-price">
+            a partir de <span class="price-strong">190.43 €</span>
+            <span class="price-old">249.99 €</span>
+            <span class="price-discount">-41%</span>
+          </p>
+
+          <div class="related-rating">★ 5</div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <!-- TOP ICON BAR -->
+      <div class="footer-top">
+        <div class="container footer-top-grid">
+          <div class="footer-top-item">
+            <img src="../icons/truck.svg" alt="" />
+            <span>ENTREGA</span>
+          </div>
+
+          <div class="footer-top-item">
+            <img src="../icons/return.svg" alt="" />
+            <span>TROCAS & DEVOLUÇÕES</span>
+          </div>
+
+          <div class="footer-top-item">
+            <img src="../icons/card.svg" alt="" />
+            <span>PAGAMENTO SEGURO</span>
+          </div>
+
+          <div class="footer-top-item">
+            <img src="../icons/support.svg" alt="" />
+            <span>APOIO AO CLIENTE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN FOOTER -->
+      <div class="footer-main container">
+        <div class="footer-col">
+          <h4>LA REDOUTE</h4>
+          <a href="#">Quem somos</a>
+          <a href="#">Contactos</a>
+          <a href="#">Sustentabilidade e responsabilidade social</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>SERVIÇOS</h4>
+          <a href="#">Ajuda</a>
+          <a href="#">Trocas e Devoluções</a>
+          <a href="#">Remover inscrição de Newsletter</a>
+          <a href="#">Montagem de mobiliário</a>
+          <a href="#">Compra e Poupa</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>MARCAS EXCLUSIVAS</h4>
+          <a href="#">La Redoute Collections</a>
+          <a href="#">La Redoute Intérieurs</a>
+          <a href="#">AM.PM</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>UNIVERSO LA REDOUTE</h4>
+          <a href="#">Inspiração</a>
+          <a href="#">Vídeos</a>
+          <a href="#">Profissionais</a>
+          <a href="#">APP La Redoute</a>
+        </div>
+      </div>
+
+      <!-- DIVIDER -->
+      <div class="footer-divider"></div>
+
+      <!-- LEGAL -->
+      <div class="footer-legal container">
+        <p>
+          Condições gerais de venda · Condições das ofertas em vigor · Política
+          de privacidade e cookies · Gerir cookies · Livro de reclamações
+          eletrónico · Resolução de Litígios Online · Recrutamento La Redoute
+        </p>
+
+        <div class="footer-lang">🌐 Portugal</div>
+        <br />
+        <br />
+        <br />
+      </div>
+    </footer>
+
+    <script async src="/node_modules/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.js",
+          "three/addons/": "/node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="../scripts/productPage.js"></script>
+    <script type="module" src="../scripts/product.js" defer></script>
+  </body>
+</html>

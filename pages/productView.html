@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview Gira-Discos</title>
+
+  <link rel="stylesheet" href="../css/preview.css" />
+
+  <script async src="/node_modules/es-module-shims.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "/node_modules/three/build/three.module.js",
+      "three/addons/": "/node_modules/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <canvas id="previewCanvas"></canvas>
+
+  <button id="toggleConfigMenu" class="config-toggle" type="button">
+    Configurações
+  </button>
+
+  <a id="btn_voltar" href="product.html">← Voltar</a>
+
+  <div class="config-menu collapsed">
+
+    <!-- TAMPO -->
+    <div class="config-item open">
+      <button class="config-header">
+        <span>Tampo</span>
+        <span class="meta">2 opções</span>
+      </button>
+
+      <div class="config-content">
+        <button class="material-tile active" data-part="tampo" value="0">
+          <div class="material-preview base-model-preview"></div>
+          <span class="material-label">Modelo Base</span>
+        </button>
+
+        <button class="material-tile" data-part="tampo" value="1">
+          <span class="material-preview" style="background:#e0e0e0"></span>
+          <span class="material-label">Transparente</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- BASE -->
+    <div class="config-item open">
+      <button class="config-header">
+        <span>Base</span>
+        <span class="meta">5 opções</span>
+      </button>
+
+      <div class="config-content">
+        <button class="material-tile active" data-part="base" value="0">
+          <div class="material-preview base-model-preview"></div>
+          <span class="material-label">Modelo Base</span>
+        </button>
+
+        <button class="material-tile" data-part="base" value="1">
+          <div class="material-preview">
+            <img src="../models/textures/madeira-branca/oldplywood-albedo.png">
+          </div>
+          <span class="material-label">Madeira Branca</span>
+        </button>
+
+        <button class="material-tile" data-part="base" value="2">
+          <div class="material-preview">
+            <img src="../models/textures/bamboo/bamboo-wood-semigloss-albedo.png">
+          </div>
+          <span class="material-label">Bamboo</span>
+        </button>
+
+        <button class="material-tile" data-part="base" value="3">
+          <div class="material-preview">
+            <img src="../models/textures/madeira-cherry/cherry-wood-veneer2-albedo.png">
+          </div>
+          <span class="material-label">Cherry</span>
+        </button>
+
+        <button class="material-tile" data-part="base" value="4">
+          <div class="material-preview">
+            <img src="../models/textures/granito/cloudy-veined-quartz-light_albedo.png">
+          </div>
+          <span class="material-label">Granito</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CORPO -->
+    <div class="config-item open">
+      <button class="config-header">
+        <span>Corpo</span>
+        <span class="meta">6 opções</span>
+      </button>
+
+      <div class="config-content">
+        <button class="material-tile active" data-part="corpo" value="0">
+          <div class="material-preview base-model-preview"></div>
+          <span class="material-label">Modelo Base</span>
+        </button>
+
+        <button class="material-tile" data-part="corpo" value="1">
+          <span class="material-preview" style="background:#ffffff"></span>
+          <span class="material-label">Branco</span>
+        </button>
+
+        <button class="material-tile" data-part="corpo" value="2">
+          <span class="material-preview" style="background:gray"></span>
+          <span class="material-label">Cinza</span>
+        </button>
+
+        <button class="material-tile" data-part="corpo" value="3">
+          <div class="material-preview">
+            <img src="../models/textures/madeira-branca/oldplywood-albedo.png">
+          </div>
+          <span class="material-label">Madeira Branca</span>
+        </button>
+
+        <button class="material-tile" data-part="corpo" value="4">
+          <div class="material-preview">
+            <img src="../models/textures/granito/cloudy-veined-quartz-light_albedo.png">
+          </div>
+          <span class="material-label">Granito</span>
+        </button>
+
+        <button class="material-tile" data-part="corpo" value="5">
+          <div class="material-preview">
+            <img src="../models/textures/madeira-cherry/cherry-wood-veneer2-albedo.png">
+          </div>
+          <span class="material-label">Madeira Cherry</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ACESSÓRIOS -->
+    <div class="config-item open">
+      <button class="config-header">
+        <span>Acessórios</span>
+        <span class="meta">2 opções</span>
+      </button>
+
+      <div class="config-content">
+        <button class="material-tile active" data-part="arm" value="0">
+          <div class="material-preview base-model-preview"></div>
+          <span class="material-label">Modelo Base</span>
+        </button>
+
+        <button class="material-tile" data-part="arm" value="1">
+          <span class="material-preview" style="background:#ccc"></span>
+          <span class="material-label">Metal</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- APOIOS -->
+    <div class="config-item open">
+      <button class="config-header">
+        <span>Apoios</span>
+        <span class="meta">4 opções</span>
+      </button>
+
+      <div class="config-content">
+        <button class="material-tile active" data-part="feet" value="0">
+          <div class="material-preview base-model-preview"></div>
+          <span class="material-label">Modelo Base</span>
+        </button>
+
+        <button class="material-tile" data-part="feet" value="1">
+          <div class="material-preview">
+            <img src="../models/textures/plastico/worn-old-plastic_albedo.png">
+          </div>
+          <span class="material-label">Plástico</span>
+        </button>
+
+        <button class="material-tile" data-part="feet" value="2">
+          <div class="material-preview">
+            <img src="../models/textures/metal/worn-aluminum_albedo.png">
+          </div>
+          <span class="material-label">Metal</span>
+        </button>
+
+        <button class="material-tile" data-part="feet" value="3">
+          <div class="material-preview">
+            <img src="../models/textures/cortica/corkboard3b-albedo.png">
+          </div>
+          <span class="material-label">Cortiça</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="../scripts/previewPage.js"></script>
+  <script type="module" src="../scripts/preview.js"></script>
+</body>
+</html>
