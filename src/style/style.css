@@ -119,14 +119,18 @@ body {
     }
 
     .flowers {
-        transform: scale(0.54);
+        transform: scale(0.66) translateY(4vmin);
     }
 
     .pipinha-message {
-        top: 7%;
-        font-size: clamp(1.35rem, 8.4vw, 2.2rem);
+        top: 9%;
+        font-size: clamp(1.7rem, 8.9vw, 2.6rem);
         max-width: 94vw;
-        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.78);
+        color: #7b1743;
+        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.84);
+        background: rgba(255, 255, 255, 0.48);
+        border-radius: 999px;
+        padding: 4px 12px;
     }
 
     .confetti-piece {
@@ -387,7 +391,7 @@ body {
 
 @media (max-width: 700px) {
     .flowers {
-        transform: scale(0.5) translateY(10vmin);
+        transform: scale(0.68) translateY(6vmin);
     }
 
     .flower {
@@ -415,16 +419,16 @@ body {
     }
 
     .pipinha-message {
-        top: 6%;
-        font-size: clamp(1.25rem, 8.6vw, 2rem);
+        top: 8%;
+        font-size: clamp(1.55rem, 8.8vw, 2.4rem);
         line-height: 1.15;
-        padding: 0 8px;
+        padding: 4px 12px;
     }
 }
 
 @media (max-width: 430px) {
     .flowers {
-        transform: scale(0.42) translateY(18vmin);
+        transform: scale(0.58) translateY(10vmin);
     }
 
     .flower--1 { left: -14vmin; }
